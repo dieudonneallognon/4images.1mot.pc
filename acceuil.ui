@@ -1,0 +1,2837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Acceuil</class>
+ <widget class="QWidget" name="Acceuil">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Acceuil</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Acceuil {
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(34, 34, 34, 255), stop:0.350282 rgba(85, 0, 127, 255), stop:0.638418 rgba(160, 82, 255, 255), stop:0.937853 rgba(54, 0, 163, 255));
+}
+
+QFrame#framePanneau, QFrame#framePages {
+background-color: rgba(0, 0, 0, 25);
+  border: 5px solid transparent;
+  border-radius: 10px;
+}
+
+QFrame#frameMenu{
+	background-color: rgb(66, 66, 66);
+}</string>
+  </property>
+  <widget class="QFrame" name="framePanneau">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>501</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  font-family: &quot;Segoe Script&quot;;
+}
+
+QPushButton:pressed {
+    border-width: 2px;
+    color: rgb(209, 209, 209);
+}
+
+QPushButton#pBParametres {
+  background-color: #d1d1d1;
+  border-color: #cbcbcb;
+}
+
+QPushButton#pBParametres:hover {
+  border-color:#ababab;
+  background-color: #c7c7c7;
+}
+
+QPushButton#pBParametres:pressed {
+  background-color: #bebebe;
+}
+
+QPushButton#pBAcceuil {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+QPushButton#pBAcceuil:hover {
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+
+QPushButton#pBAcceuil:pressed {
+  background-color: #bc2b28;
+}
+
+QPushButton#pBScores {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pBScores:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pBScores:pressed {
+  background-color: #e88f13;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pBScores">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Scores</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pBAcceuil">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Acceuil</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pBParametres">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Paramètres</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="framePages">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>501</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  font-family: &quot;Segoe Script&quot;;
+}
+
+QPushButton:pressed {
+    border-width: 2px;
+    color: rgb(209, 209, 209);
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>10</y>
+      <width>481</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="pageAcceuil">
+     <property name="styleSheet">
+      <string notr="true">QPushButton#pBNouvellePartie {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+QPushButton#pBNouvellePartie:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pBNouvellePartie:pressed {
+  background-color: #3f933f;
+}
+
+QPushButton#pBContinuerPartie {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+QPushButton#pBContinuerPartie:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+QPushButton#pBContinuerPartie:pressed {
+  background-color: #2b669a;
+}
+
+QFrame#frameAcceuil {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}</string>
+     </property>
+     <widget class="QFrame" name="frameAcceuil">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>530</y>
+         <width>461</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pBNouvellePartie">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Nouvelle Partie</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pBContinuerPartie">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Continuer la partie en attente</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>50</y>
+         <width>351</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="rsc.qrc">:/icones/icones/IMG-20190725-WA0009.jpg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>46</x>
+         <y>410</y>
+         <width>401</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;MV Boli&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; font-weight:600;&quot;&gt;4 Images&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; font-weight:600;&quot;&gt;1 Mot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageScores">
+     <property name="styleSheet">
+      <string notr="true">  text-align: center;</string>
+     </property>
+     <widget class="QTableView" name="tVScores">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>461</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">  background-color: rgba(255, 255, 255, 100);
+  border-radius: 5px;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="autoScroll">
+       <bool>false</bool>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::DotLine</enum>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>111</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>54</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>52</number>
+      </attribute>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageAccesParametres">
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_AP {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+QLineEdit {
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+QLineEdit:focus {
+  border-color: #86b5ff;
+}
+
+QGroupBox {
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 50);
+}
+
+QPushButton#pB_AP_Authentification {
+  background-color: #428bca;
+  border-color: #357ebd;
+  border-radius: 15px;
+}
+
+QPushButton#pB_AP_Authentification:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+QPushButton#pB_AP_Authentification:pressed {
+  background-color: #2b669a;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_AP">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>180</y>
+         <width>341</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLineEdit" name="lE_AP_Login">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Login</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_AP_Mdp">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>80</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>11</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Mot de Passe</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_AP_Authentification">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>150</y>
+          <width>281</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Authentification</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="l_AP_DonneesErronees">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>120</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:7pt; font-weight:600; color:#e56e5e;&quot;&gt;Login ou Mot de passe incorrect !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageAjoutAdmin">
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_AA {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+QLineEdit {
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+QLineEdit:focus {
+  border-color: #86b5ff;
+}
+
+QGroupBox {
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 50);
+}
+
+QPushButton#pB_AA_Ajouter {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  border-radius: 15px;
+}
+
+QPushButton#pB_AA_Ajouter:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pB_AA_Ajouter:pressed {
+  background-color: #3f933f;
+}
+
+QPushButton#pB_AA_Reinitialiser {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pB_AA_Reinitialiser:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pB_AA_Reinitialiser:pressed {
+  background-color: #e88f13;
+}
+
+QPushButton#pB_AA_Retour {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+QPushButton#pB_AA_Retour:hover {
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+QPushButton#pB_AA_Retour:pressed {
+  background-color: #d3d3d3;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_AA">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>180</y>
+         <width>341</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLineEdit" name="lE_AA_Login">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Login</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_AA_Mdp">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>80</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>11</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Mot de Passe</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_AA_Ajouter">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>291</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="l_AA_LoginExistant">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>120</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:7pt; font-weight:600; color:#e56e5e;&quot;&gt;Login exitant !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pB_AA_Retour">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>550</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/retour1.jpg</normaloff>:/icones/icones/retour1.jpg</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AA_Reinitialiser">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>550</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/reinitialisation.png</normaloff>:/icones/icones/reinitialisation.png</iconset>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageModifierSupprimerAdmin">
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_MA {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+QLineEdit {
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+QLineEdit:focus {
+  border-color: #86b5ff;
+}
+
+QGroupBox {
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 50);
+}
+
+QPushButton#pB_MA_Reinitialiser {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pB_MA_Reinitialiser:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pB_MA_Reinitialiser:pressed {
+  background-color: #e88f13;
+}
+
+QPushButton#pB_MA_ModifierAdmin {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+QPushButton#pB_MA_ModifierAdmin:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pB_MA_ModifierAdmin:pressed {
+  background-color: #3f933f;
+}
+
+QPushButton#pB_MA_Retour {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+QPushButton#pB_MA_Retour:hover {
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+QPushButton#pB_MA_Retour:pressed {
+  background-color: #d3d3d3;
+}
+
+QPushButton#pB_MA_SupprimerAdmin {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+QPushButton#pB_MA_SupprimerAdmin:hover {
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+
+QPushButton#pB_MA_SupprimerAdmin:pressed {
+  background-color: #bc2b28;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_MA">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>70</y>
+         <width>371</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLineEdit" name="lE_MA_Login">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>40</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Login compte à éditer/supprimer</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_MA_Mdp">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>90</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>11</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Mot de Passe compte à éditer/supprimer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="l_MA_DonneesErronees">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>330</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; color:#e56e5e;&quot;&gt;Login exitant !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_MA_MdpConfirmation">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>140</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>11</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Confirmation Mot de Passe</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_MA_LoginNv">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>230</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Nouveau Login</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lE_MA_MdpNv">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>280</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Candara Light</family>
+          <pointsize>11</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Nouveau Mot de Passe</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="l_MA_DonneesBase">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>321</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; text-decoration: underline; color:#dedede;&quot;&gt;Données de Base&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="l_MA_NouvellesDonnes">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>200</y>
+          <width>321</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft JhengHei UI Light</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; text-decoration: underline; color:#dedede;&quot;&gt;Nouvelles Données&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pB_MA_Retour">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>550</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/retour1.jpg</normaloff>:/icones/icones/retour1.jpg</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MA_Reinitialiser">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>550</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/reinitialisation.png</normaloff>:/icones/icones/reinitialisation.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MA_SupprimerAdmin">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>550</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/supprimer.png</normaloff>:/icones/icones/supprimer.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MA_ModifierAdmin">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>550</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/valider.png</normaloff>:/icones/icones/valider.png</iconset>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageOptionsParametres">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  border-radius: 20px;
+}
+QPushButton#pB_OP_AjouterMot {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+QPushButton#pB_OP_AjouterMot:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pB_OP_AjouterMot:pressed {
+  background-color: #3f933f;
+}
+
+QPushButton#pB_OP_AjouterAdmin {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+QPushButton#pB_OP_AjouterAdmin:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+QPushButton#pB_OP_AjouterAdmin:pressed {
+  background-color: #2b669a;
+}
+
+QPushButton#pB_OP_Parametres {
+  background-color: #d1d1d1;
+  border-color: #cbcbcb;
+}
+
+QPushButton#pB_OP_Parametres:hover {
+  border-color:#ababab;
+  background-color: #c7c7c7;
+}
+
+QPushButton#pB_OP_Parametres:pressed {
+  background-color: #bebebe;
+}
+
+QPushButton#pB_OP_ModifierSupprimerAdmin {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+QPushButton#pB_OP_ModifierSupprimerAdmin:hover {
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+
+QPushButton#pB_OP_ModifierSupprimerAdmin:pressed {
+  background-color: #bc2b28;
+}
+
+QPushButton#pB_OP_ModifierSupprimerMot {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pB_OP_ModifierSupprimerMot:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pB_OP_ModifierSupprimerMot:pressed {
+  background-color: #e88f13;
+}
+
+QFrame#frame_OP {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_OP">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pB_OP_ModifierSupprimerMot">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>220</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Supprimer un Mot</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_OP_ModifierSupprimerAdmin">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>440</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modifier ou Supprimer 
+les paramètres d'un administrateur</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_OP_AjouterMot">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>110</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ajouter un Mot</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_OP_AjouterAdmin">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>330</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ajouter un Administrateur</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pagePause">
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_P {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+QPushButton {
+  border-radius: 35px;
+}
+
+QPushButton#pB_P_ReprendrePartie {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+QPushButton#pB_P_ReprendrePartie:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+QPushButton#pB_P_ReprendrePartie:pressed {
+  background-color: #2b669a;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_P">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>-1</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pB_P_ReprendrePartie">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>330</y>
+         <width>211</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reprendre la Partie</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_P_Pause">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>200</y>
+         <width>361</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Ink Free</family>
+         <pointsize>72</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;PAUSE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_P_TitreTemps">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>10</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temps:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_P_TitreScore">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Score:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_P_Temps">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>10</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f5c70e;&quot;&gt;00:02:05&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_P_Score">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#a6cb75;&quot;&gt;15&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageAjouterMot">
+     <property name="styleSheet">
+      <string notr="true">QLabel#l_AM_Image1, QLabel#l_AM_Image2, QLabel#l_AM_Image3, QLabel#l_AM_Image4 {
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+  
+	background-color: rgba(255, 255, 255, 75);
+}
+
+QFrame#frame_AM {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+QPushButton#pB_AM_Reinitialiser {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pB_AM_Reinitialiser:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pB_AM_Reinitialiser:pressed {
+  background-color: #e88f13;
+}
+
+QPushButton#pB_AM_AjouterMot {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+QPushButton#pB_AM_AjouterMot:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pB_AM_AjouterMot:pressed {
+  background-color: #3f933f;
+}
+
+QPushButton#pB_AM_ChoisirImage1, QPushButton#pB_AM_ChoisirImage2, QPushButton#pB_AM_ChoisirImage3, QPushButton#pB_AM_ChoisirImage4 {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+QPushButton#pB_AM_ChoisirImage1:hover, QPushButton#pB_AM_ChoisirImage2:hover, QPushButton#pB_AM_ChoisirImage3:hover, QPushButton#pB_AM_ChoisirImage4:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+QPushButton#pB_AM_ChoisirImage1:pressed, QPushButton#pB_AM_ChoisirImage2:pressed, QPushButton#pB_AM_ChoisirImage3:pressed, QPushButton#pB_AM_ChoisirImage4:pressed {
+  background-color: #2b669a;
+}
+
+QLineEdit {
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+
+QLineEdit:focus {
+  border-color: #86b5ff;
+}
+
+QPushButton#pB_AM_Retour {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+QPushButton#pB_AM_Retour:hover {
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+QPushButton#pB_AM_Retour:pressed {
+  background-color: #d3d3d3;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_AM">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>-1</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="l_AM_Image3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>211</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_ChoisirImage4">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>420</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir unr Image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_ChoisirImage3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>420</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir une image</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_AM_TagExistant">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>490</y>
+         <width>251</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#901313;&quot;&gt;Tag existant !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_ChoisirImage2">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>190</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir une image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_Reinitialiser">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>560</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/reinitialisation.png</normaloff>:/icones/icones/reinitialisation.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_AjouterMot">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>560</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/valider.png</normaloff>:/icones/icones/valider.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_ChoisirImage1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir une image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_AM_Retour">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>560</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/retour1.jpg</normaloff>:/icones/icones/retour1.jpg</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_AM_Image2">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>10</y>
+         <width>211</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_AM_Image4">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>240</y>
+         <width>211</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_AM_Image1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>211</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lE_AM_TagAssocie">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>490</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Candara Light</family>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="inputMask">
+        <string>AAAAAAAA</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Tag Mot</string>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>pB_AM_Reinitialiser</zorder>
+      <zorder>l_AM_Image3</zorder>
+      <zorder>pB_AM_ChoisirImage4</zorder>
+      <zorder>pB_AM_ChoisirImage3</zorder>
+      <zorder>l_AM_TagExistant</zorder>
+      <zorder>pB_AM_ChoisirImage2</zorder>
+      <zorder>pB_AM_AjouterMot</zorder>
+      <zorder>pB_AM_ChoisirImage1</zorder>
+      <zorder>pB_AM_Retour</zorder>
+      <zorder>l_AM_Image2</zorder>
+      <zorder>l_AM_Image4</zorder>
+      <zorder>l_AM_Image1</zorder>
+      <zorder>lE_AM_TagAssocie</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageModifier_SupprimerMot">
+     <property name="styleSheet">
+      <string notr="true">QLabel#l_MM_Image1, QLabel#l_MM_Image2, QLabel#l_MM_Image3, QLabel#l_MM_Image4 {
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+  
+	background-color: rgba(255, 255, 255, 75);
+}
+
+QFrame#frame_MM {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+QPushButton#pB_MM_Reinitialiser {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pB_MM_Reinitialiser:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pB_MM_Reinitialiser:pressed {
+  background-color: #e88f13;
+}
+
+QPushButton#pB_MM_ModifierMot {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+QPushButton#pB_MM_ModifierMot:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pB_MM_ModifierMot:pressed {
+  background-color: #3f933f;
+}
+
+QPushButton#pB_MM_ChoisirImage1, QPushButton#pB_MM_ChoisirImage2, QPushButton#pB_MM_ChoisirImage3, QPushButton#pB_MM_ChoisirImage4 {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+QPushButton#pB_MM_ChoisirImage1:hover, QPushButton#pB_MM_ChoisirImage2:hover, QPushButton#pB_MM_ChoisirImage3:hover, QPushButton#pB_MM_ChoisirImage4:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+QPushButton#pB_MM_ChoisirImage1:pressed, QPushButton#pB_MM_ChoisirImage2:pressed, QPushButton#pB_MM_ChoisirImage3:pressed, QPushButton#pB_MM_ChoisirImage4:pressed {
+  background-color: #2b669a;
+}
+
+QLineEdit {
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+QLineEdit:focus {
+  border-color: #86b5ff;
+}
+
+QPushButton#pB_MM_Retour {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+QPushButton#pB_MM_Retour:hover {
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+QPushButton#pB_MM_Retour:pressed {
+  background-color: #d3d3d3;
+}
+
+QPushButton#pB_MM_SupprimerMot {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+QPushButton#pB_MM_SupprimerMot:hover {
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+
+QPushButton#pB_MM_SupprimerMot:pressed {
+  background-color: #bc2b28;
+}
+
+QComboBox::drop-down {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+ }
+
+ QComboBox {
+     border: 1px solid #b9b9b9;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+	 background-color: #fff;
+     padding-left: 7px;
+     padding-bottom: 4px;
+ }
+ 
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 15px;
+    color: red;
+     border-left-width: 1px;
+     border-left-color: darkgray;
+     border-left-style: solid;
+     border-top-right-radius: 3px;
+     border-bottom-right-radius: 3px;
+ }
+
+ QComboBox::down-arrow {
+     image: url(:/imgs/images/flecheBas.png);
+	 width: 10px;
+ }
+
+ QComboBox QAbstractItemView{
+     border: 2px solid darkgray;
+ }</string>
+     </property>
+     <widget class="QFrame" name="frame_MM">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="l_MM_Image3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>270</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_ChoisirImage4">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>450</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir unr Image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_ChoisirImage3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>450</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir une image</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_MM_TagExistant">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>510</y>
+         <width>191</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#901313;&quot;&gt;Tag existant !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_ChoisirImage2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>220</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir une image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_Reinitialiser">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>560</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/reinitialisation.png</normaloff>:/icones/icones/reinitialisation.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_ChoisirImage1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Choisir une image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_Retour">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>560</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/retour1.jpg</normaloff>:/icones/icones/retour1.jpg</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_MM_Image2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>40</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_MM_Image4">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>270</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_MM_Image1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cBChoixMot">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>10</y>
+         <width>221</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="currentText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_MM_SupprimerMot">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>560</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="rsc.qrc">
+         <normaloff>:/icones/icones/supprimer.png</normaloff>:/icones/icones/supprimer.png</iconset>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageJeu">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#l_J_Image1, QLabel#l_J_Image2, QLabel#l_J_Image3, QLabel#l_J_Image4 {
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 75);
+}
+
+QGroupBox {
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 50);
+}
+
+QPushButton#pB_J_LettreChoisie1, QPushButton#pB_J_LettreChoisie2, QPushButton#pB_J_LettreChoisie3, QPushButton#pB_J_LettreChoisie4, QPushButton#pB_J_LettreChoisie5, QPushButton#pB_J_LettreChoisie6, QPushButton#pB_J_LettreChoisie7, QPushButton#pB_J_LettreChoisie8 {
+	background-color: #FFE7BA;
+	border-color: #F5DEB3;
+    color: black;
+	font-weight: bolder;
+	font-family: Candara;
+    font-size: 20px;
+}
+
+QPushButton#pB_J_LettreChoisie1:hover, QPushButton#pB_J_LettreChoisie2:hover, QPushButton#pB_J_LettreChoisie3:hover, QPushButton#pB_J_LettreChoisie4:hover, QPushButton#pB_J_LettreChoisie5:hover, QPushButton#pB_J_LettreChoisie6:hover, QPushButton#pB_J_LettreChoisie7:hover, QPushButton#pB_J_LettreChoisie8:hover {
+	background-color: #FFDEAD;
+	border-color: #EECFA1;
+}
+
+QPushButton#pB_J_LettreChoisie1:pressed, QPushButton#pB_J_LettreChoisie2:pressed, QPushButton#pB_J_LettreChoisie3:pressed, QPushButton#pB_J_LettreChoisie4:pressed, QPushButton#pB_J_LettreChoisie5:pressed, QPushButton#pB_J_LettreChoisie6:pressed, QPushButton#pB_J_LettreChoisie7:pressed, QPushButton#pB_J_LettreChoisie8:pressed {
+	background-color: #e3c59a;
+}
+
+QPushButton#pBPause {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+QPushButton#pBPause:hover {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+QPushButton#pBPause:pressed {
+  background-color: #e88f13;
+}
+
+QPushButton#pBLettre1, QPushButton#pBLettre2, QPushButton#pBLettre3, QPushButton#pBLettre4, QPushButton#pBLettre5, QPushButton#pBLettre6, QPushButton#pBLettre7, QPushButton#pBLettre8, QPushButton#pBLettre9, QPushButton#pBLettre10, QPushButton#pBLettre11, QPushButton#pBLettre12 {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+QPushButton#pBLettre1:hover, QPushButton#pBLettre2:hover, QPushButton#pBLettre3:hover, QPushButton#pBLettre4:hover, QPushButton#pBLettre5:hover, QPushButton#pBLettre6:hover, QPushButton#pBLettre7:hover, QPushButton#pBLettre8:hover, QPushButton#pBLettre9:hover, QPushButton#pBLettre10:hover, QPushButton#pBLettre11:hover, QPushButton#pBLettre12:hover {
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+QPushButton#pBLettre1:pressed, QPushButton#pBLettre2:pressed, QPushButton#pBLettre3:pressed, QPushButton#pBLettre4:pressed, QPushButton#pBLettre5:pressed, QPushButton#pBLettre6:pressed, QPushButton#pBLettre7:pressed, QPushButton#pBLettre8:pressed, QPushButton#pBLettre9:pressed, QPushButton#pBLettre10:pressed, QPushButton#pBLettre11:pressed, QPushButton#pBLettre12:pressed {
+  background-color: #d3d3d3;
+}
+
+QFrame#frame_J {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_J">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pBLettre4">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>480</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_Image2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>40</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre6">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>480</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_Image4">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>220</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre7">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>540</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_TitreTemps">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>10</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Temps:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre1">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>480</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBPause">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>480</y>
+         <width>71</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 72pt &quot;Nirmala UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>II</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_Image1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="gBLettreChoisies">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>410</y>
+         <width>481</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="pB_J_LettreChoisie8">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie4">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie7">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie6">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie3">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie2">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pB_J_LettreChoisie5">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>10</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pBLettre10">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>540</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre11">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>540</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre5">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>480</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_Score">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#a6cb75;&quot;&gt;15&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre3">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>480</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_TitreScore">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Score:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre8">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>540</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre12">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>540</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre9">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>540</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_Image3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_J_Temps">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>10</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f5c70e;&quot;&gt;00:02:05&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pBLettre2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>480</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageResultat">
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_R {
+  background-color: rgba(255, 255, 255, 100);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+QPushButton#pB_R_Ok {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  border-radius: 20px;
+}
+
+QPushButton#pB_R_Ok:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+QPushButton#pB_R_Ok:pressed {
+  background-color: #3f933f;
+}
+
+QLineEdit {
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+QLineEdit:focus {
+  border-color: #86b5ff;
+}</string>
+     </property>
+     <widget class="QFrame" name="frame_R">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>-1</y>
+        <width>481</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="l_R_TitreScore">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>90</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe Script</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600; color:#ffffff;&quot;&gt;Score Final&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_R_Score">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>90</y>
+         <width>111</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe Script</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; color:#e5ae23;&quot;&gt;17&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_R_TitreTemps">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>160</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe Script</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600; color:#ffffff;&quot;&gt;Temps de jeu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_R_Temps">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>160</y>
+         <width>251</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe Script</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; font-weight:600; color:#e57d9c;&quot;&gt;00:05:21&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pB_R_Ok">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>470</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK !</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_R_TitreScore_2">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>371</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Candara Light</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; font-style:italic; text-decoration: underline; color:#6fcbc4;&quot;&gt;Résultats&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lE_R_nom">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>310</y>
+         <width>261</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Candara Light</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Votre nom ou pseudo</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rsc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
